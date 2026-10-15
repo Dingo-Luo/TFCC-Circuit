@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f9">
+  <meta name="description" content="Simple guided TFCC exercise circuit tracker, saved in your browser">
+  <title>TFCC Circuit Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div><div class="eyebrow">PERSONAL WORKOUT</div><h1>TFCC <span>Circuits</span></h1><p class="sub">逐项完成训练，重量和备注会自动保留。</p></div>
+      <div class="local-pill">● 已保存在本设备</div>
+    </header>
+
+    <main>
+      <section id="home" class="screen">
+        <div class="card intro">
+          <div class="eyebrow">准备训练</div>
+          <h2>开始训练</h2>
+          <div class="choose-label">每个循环的轮数</div>
+          <div class="round-picker" role="radiogroup" aria-label="每个循环的轮数">
+            <label><input type="radio" name="rounds" value="1"><span>1</span></label>
+            <label><input type="radio" name="rounds" value="2" checked><span>2</span></label>
+            <label><input type="radio" name="rounds" value="3"><span>3</span></label>
+          </div>
+          <div class="notice" id="home-pain">疼痛参考：2/10。请留意训练过程中症状是否变化。</div>
+          <button id="start" class="primary wide">开始训练 <span aria-hidden="true">→</span></button>
+          <button id="resume" class="secondary wide" hidden>继续上次训练</button>
+        </div>
+        <div class="card"><h3>训练循环</h3><div id="overview"></div></div>
+      </section>
+
+      <section id="workout" class="screen" hidden>
+        <div class="step-top"><button id="back-home" class="text-button">← 首页</button><span id="progress-label" class="eyebrow"></span></div>
+        <div class="progress-track" role="progressbar" aria-label="训练进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track"><div id="progress-fill"></div></div>
+        <div class="card workout-card">
+          <div class="tags"><span id="circuit-tag" class="chip"></span><span id="round-tag" class="chip neutral"></span></div>
+          <h2 id="exercise-name"></h2><p id="exercise-hint" class="hint"></p>
+          <p id="exercise-reps" class="muted"></p>
+          <div class="input-stack"><label for="weight">重量 / 配置 <span class="muted normal">（无需单位）</span></label><input id="weight" type="text" autocomplete="off" placeholder="例如：5 或 5+2.5"></div>
+          <div class="input-stack"><label for="comment">备注</label><textarea id="comment" rows="4" placeholder="器械设置、组合重量、次数或其他备注"></textarea></div>
+          <div id="save-status" aria-live="polite" class="save-status">修改将自动保存</div>
+        </div>
+        <div class="navigation"><button id="previous" class="secondary">← 上一个动作</button><button id="next" class="primary">下一个动作 →</button></div>
+        <p class="small-note center">重量与备注可随时修改，下次训练会直接显示上次填写的内容。</p>
+      </section>
+
+      <section id="complete" class="screen" hidden>
+        <div class="card finish-card"><div class="finish-symbol">✓</div><h2>训练完成</h2><p class="muted" id="finish-summary"></p><p>已保留各动作的重量和备注，下次训练可直接沿用。</p><button id="done-home" class="primary wide">返回首页</button></div>
+      </section>
+    </main>
+    <footer>GitHub Pages 静态网站 · 数据仅保存在本地浏览器 · 无需账号</footer>
+  </div>
+</body>
+</html>

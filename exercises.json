@@ -1,0 +1,73 @@
+{
+  "title": "TFCC Training Tracker",
+  "preparation": "放松小臂",
+  "painNote": "疼痛参考：2/10。留意症状变化。",
+  "circuits": [
+    {
+      "id": "c1",
+      "name": "Circuit 1",
+      "prescription": "8–10 × 2",
+      "exercises": [
+        {
+          "id": "wrist-extension",
+          "name": "手腕伸展",
+          "hint": "手背向上"
+        },
+        {
+          "id": "pronation-supination",
+          "name": "旋前旋后",
+          "hint": ""
+        },
+        {
+          "id": "hammer-curl",
+          "name": "锤式弯举",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "name": "Circuit 2",
+      "prescription": "8–10 × 2",
+      "exercises": [
+        {
+          "id": "wrist-flexion",
+          "name": "手腕屈伸",
+          "hint": "手心向上"
+        },
+        {
+          "id": "triceps-extension",
+          "name": "肱三头肌伸展",
+          "hint": "龙门架"
+        },
+        {
+          "id": "reverse-curl",
+          "name": "反向弯举",
+          "hint": "手背向上，手掌水平"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "name": "Circuit 3",
+      "prescription": "8–10 × 2 (unless noted)",
+      "exercises": [
+        {
+          "id": "straight-elbow-wrist-extension",
+          "name": "直肘腕伸展",
+          "hint": "手背向上"
+        },
+        {
+          "id": "alternating-knuckle-shoulder-touch",
+          "name": "交替指节肩部触碰",
+          "hint": "脚分开，手合并"
+        },
+        {
+          "id": "pinch-block-lift",
+          "name": "捏块提举",
+          "hint": "顶峰停一秒，5–8次"
+        }
+      ]
+    }
+  ]
+}
